@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "test",
+    "database": "shopdb",
     "host": "localhost",
     "dialect": "mysql"
   },
