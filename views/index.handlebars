@@ -2,32 +2,49 @@
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+        <hr>
+        <h1 id="randomGameH1">{{msg}}</h1>
+        <hr>
+        <h2 id="randomGameName">{{name}}</h2>
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <img id='poster' src="https://mvpo.us/img/P5237.jpg" alt="poster image">        
           </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+          <div class="col-12">
+            <hr>
+            <h3>Game Details</h3>
+            <p>Release Year: <span>2018</span></p>
+            <p>Genre: <span>First Person Shooter</span></p>
+            <p>Publisher: <span>Blizzard</span></p>
+            <p>Rating: <span>9/10</span></p>
+            <p>Price: <span>{{price}}</span></p>
+            <p>Platform: <span>{{platform}}</span></p>
+            
+            <hr>
           </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+          <div class="col-12">
+            <h3>Minimum System Requirements (30 fps on Lowest Settings)</h3>
+            <p>Operating System: <span>Windows Vista/7/ 8/10 64-bit (latest Service Pack)</span></p>
+            <p>Processor: <span>Intel Core i3 or AMD Phenom X3 865</span></p>
+            <p>Video: <span>Nvidia GeForce GTX 460, ATI Radeon HD 4850, or Intel HD Graphics 4400</span></p>
+            <p>Memory: <span>768 MB VRAM, 4 GB System RAM</span></p>
+            <p>Storage: <span>7200 RPM with 5 GB available HD space</span></p>
+            <hr>
+          </div>
+          <div class="col-12">
+            <h3>Recommended System Requirements (60 fps on Medium Settings)</h3>
+            <p>Operating System: <span>Windows Vista/7/ 8/10 64-bit (latest Service Pack)</span></p>
+            <p>Processor: <span>Intel Core i5 or AMD Phenom II X3, 2.8 GHz</span></p>
+            <p>Video: <span>Nvidia GeForce GTX 660 or ATI Radeon HD 7950</span></p>
+            <p>Memory: <span>2 GB VRAM, 6 GB System RAM</span></p>
+            <p>Storage: <span>7200 RPM with 5 GB available HD space</span></p>
+            <hr>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
