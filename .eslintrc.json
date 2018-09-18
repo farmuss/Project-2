@@ -1,8 +1,8 @@
 {
     "env": {
-        "browser": true,
-        "commonjs": true,
-        "node": true
+        "browser": false,
+        "commonjs": false,
+        "node": false
     },
     "extends": "prettier",
     "plugins": [
