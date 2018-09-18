@@ -1,3 +1,65 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+#item_amount {
+  position: absolute;
+  bottom: -10px;
+  right: -15px;
+  font-size: 20px;
+  text-align: center;
+  /* height: 15px;
+  width: 15px; */
+  border-radius: 120px;
+}
+
+#cart_icon {
+  position: relative;
+  background-image: url("./../images/cart_icon_standard.svg");
+  background-size: 30px 30px;
+  height: 30px;
+  width: 30px;
+}
+
+#cart_icon:hover {
+  background-image: url("./../images/cart_icon_hover.svg");
+  background-size: 30px 30px;
+}
+
+body {
+  background-color: #aaaaaa;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+  background-color: lightgray;
+}
+
+button {
+  background-color: darkslategray;
+}
+
+footer {
+  color: whitesmoke;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #343a40;
+}
+
+#randomGameH1, #randomGameName {
+  text-align: center;
+}
+
+#poster {
+  height: 420px;
+  width: 280px;
+}
+
+p {
+  font-weight: 900;
+}
+
+span {
+  font-weight: 400;
+}
