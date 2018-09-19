@@ -16,10 +16,10 @@ module.exports = function(app) {
     }
     // Here we add an "include" property to our options in our findAll query
     // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Author
+    // In this case, just db.Product
     db.Product.findAll({
       where: query,
-      include: [db.User]
+    //   include: [db.User]
     }).then(function(dbProduct) {
       res.json(dbProduct);
     });
@@ -34,7 +34,7 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       },
-      include: [db.User]
+    //   include: [db.User]
     }).then(function(dbProduct) {
       res.json(dbProduct);
     });
@@ -42,7 +42,9 @@ module.exports = function(app) {
 
   // POST route for saving a new product
   app.post("/api/products", function(req, res) {
-    db.Product.create(req.body).then(function(dbProductt) {
+    console.log( req.body);
+    db.Product.create(req.body).then(function(dbProduct) {
+    
       res.json(dbProduct);
     });
   });
