@@ -6,7 +6,7 @@ module.exports = function(app) {
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.User
     db.User.findAll({
-      include: [db.Product]
+      // include: [db.Product]
     }).then(function(dbUser) {
       res.json(dbUser);
     });
@@ -20,15 +20,16 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       },
-      include: [db.Product]
+    //   include: [db.Product]
     }).then(function(dbUser) {
       res.json(dbUser);
     });
   });
 
   app.post("/api/users", function(req, res) {
+    console.log(req.body);
     db.User.create(req.body).then(function(dbUser) {
-      res.json(dbAuthor);
+      res.json(dbUser);
     });
   });
 

@@ -3,22 +3,26 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function (dbExamples) {
+
+    db.Products.findAll({}).then(function(dbProducts) {
       res.render("index", {
-        msg: "Random AAA Game",
-        examples: dbExamples,
-        name: "Overwatch",
-        price: "$59.99",
-        platform: "PC"
+        msg: "Welcome!",
+        products: dbProducts
+
+   
+
       });
     });
   });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function (req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
+
+  app.get("/product/:id", function(req, res) {
+    db.Product.findOne({ where: { id: req.params.id } }).then(function(dbProduct) {
+      res.render("product", {
+        product: dbProduct
+
+
       });
     });
   });
