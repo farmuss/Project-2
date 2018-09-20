@@ -6,10 +6,6 @@ module.exports = function(app) {
     var posterURL = "https://mvpo.us/img/P5237.jpg"
     db.Product.findAll({}).then(function (dbProduct) {
       res.render("index", {
-<<<<<<< HEAD
-        msg: "Welcome!",
-        products: dbProducts
-=======
         poster: posterURL,
         releaseYear: 2016,
         genre: "FPS",
@@ -28,7 +24,6 @@ module.exports = function(app) {
         memoryRec: "2 GB VRAM, 6 GB System RAM",
         storageMin: posterURL,
         storageRec: "7200 RPM with 5 GB available HD space",
->>>>>>> 9ce6527285089853cb88c752d78ee5949405f584
       });
     });
   });
