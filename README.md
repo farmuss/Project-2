@@ -23,9 +23,7 @@ Database
 
 API
   Stripe - Online payment processing for business
-  Game video
-
-Testing
+  igdb-api-node 
 
 Heroku Link
 https://apps.herokuapp.com/ (will update this link when it complete)
@@ -42,11 +40,11 @@ Step-by-Step
 Run node server.js (starts the server, creates the tables in shopdb)
 Visit localhost:3000
 
-Authors
-AK - (https://github.com/)
-Josh - (https://github.com/)
-Will Salomon- (https://github.com/)
-Joanna Yang - (https://github.com/joayang)
+Authors:
+AK 
+Josh
+Will
+Joanna
 
 Acknowledgments
 Our thanks to:
@@ -54,3 +52,4 @@ Our thanks to:
  Brendan Bormann    - TA
  Dylan Acup         - TA 
  Evan Tucker        - TA
+ Ryan Gendel        - TA
