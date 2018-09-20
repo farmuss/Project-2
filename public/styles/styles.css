@@ -2,6 +2,10 @@
   line-height: 2.5;
 }
 
+#cardTitle {
+  text-align: center;
+}
+
 #item_amount {
   position: absolute;
   bottom: -10px;
@@ -11,6 +15,48 @@
   /* height: 15px;
   width: 15px; */
   border-radius: 120px;
+}
+
+#paymentCard {
+  position: fixed;
+  z-index: 5;
+  height: 60vh;
+  width: 50vw;
+  top: 50%;
+  left: 50%;
+  margin-top: -30vh; 
+  margin-left: -25vw; 
+  display: none;
+}
+
+#checkoutBttn {
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  width: 90px;
+  height: 50px;
+  background-color: #343a40;
+  color: #28a745;
+  border-color: #28a745;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+#checkoutBttn:hover {
+  color: white;
+  background-color: #28a745;
+
+}
+#checkoutBttn:active {
+  color: white;
+  background-color: #1f8035;
+
+}
+
+.columnName {
+  font-weight: bold;
 }
 
 #cart_icon {
@@ -35,11 +81,10 @@ body {
   background-color: lightgray;
 }
 
-button {
-  background-color: darkslategray;
-}
-
 footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
   color: whitesmoke;
   height: 50px;
   line-height: 50px;
@@ -47,7 +92,7 @@ footer {
   background-color: #343a40;
 }
 
-#randomGameH1, #randomGameName {
+h1, h2 {
   text-align: center;
 }
 
