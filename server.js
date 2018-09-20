@@ -25,6 +25,8 @@ app.set("view engine", "handlebars");
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
+require("./routes/product-api-routes")(app);
+require("./routes/user-api-routes")(app);
 
 var syncOptions = { force: false };
 
@@ -35,6 +37,7 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
+// if add new column name after db create then we have to change the (syncOptions) to ({force:true}). 
 db.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
     console.log(

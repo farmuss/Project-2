@@ -4,6 +4,7 @@ module.exports = function(sequelize, DataTypes) {
   // defining as part of property
   var Product = sequelize.define("Product", {
     
+    
     name: DataTypes.STRING,
     category: DataTypes.STRING,
     // platform: DataTypes.STRING,
