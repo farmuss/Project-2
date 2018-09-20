@@ -15,6 +15,10 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  {{!-- payment system styling --}}
+  <link rel="stylesheet" type="text/css" href="./styles/example3.css" data-rel-css="" />
+  {{!-- payment system styling --}}
   <title>Game Haven</title>
 </head>
 
@@ -22,31 +26,31 @@
 
   {{!-- navbar --}}
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Game Haven</a>
+    <a class="navbar-brand" href="/">Game Haven</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-  {{!-- new releases --}}
+    {{!-- new releases --}}
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-2">
         <li class="nav-item">
-          <a class="nav-link" href="#">New Releases</a>
+          <a class="nav-link" href="/newreleases">New Releases</a>
         </li>
 
-  {{!-- full catalogue dropdown --}}
+        {{!-- full catalogue dropdown --}}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Full Catalogue
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">PC</a>
-            <a class="dropdown-item" href="#">XBOX ONE</a>
-            <a class="dropdown-item" href="#">XBOX 360</a>
-            <a class="dropdown-item" href="#">PS4</a>
-            <a class="dropdown-item" href="#">PS3</a>
+            <a class="dropdown-item" href="/fullcatalogue/pc">PC</a>
+            <a class="dropdown-item" href="/fullcatalogue/xbox">XBOX ONE</a>
+            <a class="dropdown-item" href="/fullcatalogue/xbox">XBOX 360</a>
+            <a class="dropdown-item" href="/fullcatalogue/playstation">PS4</a>
+            <a class="dropdown-item" href="/fullcatalogue/playstation">PS3</a>
           </div>
         </li>
       </ul>
@@ -68,30 +72,31 @@
             Profile
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Orders</a>
-            <a class="dropdown-item" href="#">Wish List</a>
+            <a class="dropdown-item" href="/profile/orders">Orders</a>
+            <a class="dropdown-item" href="/profile/wishlist">Wish List</a>
             <a class="dropdown-item" href="#">Log out</a>
           </div>
         </li>
 
         {{!-- shopping cart --}}
         <li>
-            <a class="navbar-brand ml-0" href="#">
+          <a class="navbar-brand ml-0" href="/cart">
             <div id="cart_icon">
               <div id="item_amount"></div>
             </div>
-              {{!-- <img id="cart_icon" src="./images/cart_icon_standard.svg" alt="cart_icon"> --}}
-            </a> 
+          </a>
         </li>
-      </ul> 
+      </ul>
     </div>
-    
+
   </nav>
   {{!-- navbar --}}
 
   {{{body}}}
-
+  
+  <script src="js/example3.js" data-rel-js></script>
   <script src="./js/index.js"></script>
+
 </body>
 
 {{!-- footer --}}

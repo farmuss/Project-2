@@ -3,20 +3,20 @@
     <div class="row">
       <div class="col-8 offset-2">
         <hr>
-        <h1 id="randomGameH1">{{msg}}</h1>
+        <h1>Random Game</h1>
         <hr>
-        <h2 id="randomGameName">{{name}}</h2>
+        <h2>{{name}}</h2>
         <div class="row">
           <div class="col-12 d-flex justify-content-center">
-            <img id='poster' src="https://mvpo.us/img/P5237.jpg" alt="poster image">        
+            <img id='poster' src={{poster}} alt="game_poster">        
           </div>
           <div class="col-12">
             <hr>
             <h3>Game Details</h3>
-            <p>Release Year: <span>2018</span></p>
-            <p>Genre: <span>First Person Shooter</span></p>
-            <p>Publisher: <span>Blizzard</span></p>
-            <p>Rating: <span>9/10</span></p>
+            <p>Release Year: <span>{{releaseYear}}</span></p>
+            <p>Genre: <span>{{genre}}</span></p>
+            <p>Publisher: <span>{{publisher}}</span></p>
+            <p>Rating: <span>{{rating}}</span></p>
             <p>Price: <span>{{price}}</span></p>
             <p>Platform: <span>{{platform}}</span></p>
             
@@ -24,20 +24,20 @@
           </div>
           <div class="col-12">
             <h3>Minimum System Requirements (30 fps on Lowest Settings)</h3>
-            <p>Operating System: <span>Windows Vista/7/ 8/10 64-bit (latest Service Pack)</span></p>
-            <p>Processor: <span>Intel Core i3 or AMD Phenom X3 865</span></p>
-            <p>Video: <span>Nvidia GeForce GTX 460, ATI Radeon HD 4850, or Intel HD Graphics 4400</span></p>
-            <p>Memory: <span>768 MB VRAM, 4 GB System RAM</span></p>
-            <p>Storage: <span>7200 RPM with 5 GB available HD space</span></p>
+            <p>Operating System: <span>{{osMin}}</span></p>
+            <p>Processor: <span>{{processorMin}}</span></p>
+            <p>Video: <span>{{videoMin}}</span></p>
+            <p>Memory: <span>{{memoryMin}}</span></p>
+            <p>Storage: <span>{{storageMin}}</span></p>
             <hr>
           </div>
           <div class="col-12">
             <h3>Recommended System Requirements (60 fps on Medium Settings)</h3>
-            <p>Operating System: <span>Windows Vista/7/ 8/10 64-bit (latest Service Pack)</span></p>
-            <p>Processor: <span>Intel Core i5 or AMD Phenom II X3, 2.8 GHz</span></p>
-            <p>Video: <span>Nvidia GeForce GTX 660 or ATI Radeon HD 7950</span></p>
-            <p>Memory: <span>2 GB VRAM, 6 GB System RAM</span></p>
-            <p>Storage: <span>7200 RPM with 5 GB available HD space</span></p>
+            <p>Operating System: <span>{{osRec}}</span></p>
+            <p>Processor: <span>{{processorRec}}</span></p>
+            <p>Video: <span>{{videoRec}}</span></p>
+            <p>Memory: <span>{{memoryRec}}</span></p>
+            <p>Storage: <span>{{storageRec}}</span></p>
             <hr>
           </div>
         </div>
