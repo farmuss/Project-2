@@ -7,9 +7,9 @@ module.exports = function(sequelize, DataTypes) {
     
     name: DataTypes.STRING,
     category: DataTypes.STRING,
-    platform: DataTypes.STRING,
-    price: DataTypes.FLOAT,
-    description: DataTypes.TEXT
+    // platform: DataTypes.STRING,
+    summary: DataTypes.TEXT,
+    image: DataTypes.STRING,
 
   });
   return Product;
