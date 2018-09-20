@@ -8,9 +8,6 @@ module.exports = function(app) {
       res.render("index", {
         msg: "Welcome!",
         products: dbProducts
-
-   
-
       });
     });
   });
