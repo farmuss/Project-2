@@ -27,35 +27,47 @@ module.exports = function(app) {
       });
     });
   });
+  
 
   // profile orders
   app.get("/profile/orders", function (req, res) {
     res.render("orders");
-});
+  });
 
   // profile wishlist
   app.get("/profile/wishlist", function (req, res) {
     res.render("wishlist");
-});
+  });
 
   // PC Games
   app.get("/fullcatalogue/pc", function (req, res) {
     res.render("pc");
-});
+  });
 
   // Playstation Games
-  app.get("/fullcatalogue/playstation", function (req, res) {
-    res.render("playstation");
-});
+    app.get("/fullcatalogue/playstation", function (req, res) {
+      res.render("playstation");
+  });
 
-  // XBOX Games
-  app.get("/fullcatalogue/xbox", function (req, res) {
-    res.render("xbox");
-});
+    // XBOX Games
+    app.get("/fullcatalogue/xbox", function (req, res) {
+      res.render("xbox");
+  });
 
   // new releases page
   app.get("/newreleases", function (req, res) {
       res.render("newReleases");
+  });
+  // Load example page and pass in an example by id
+
+  app.get("/product/:id", function(req, res) {
+    db.Product.findOne({ where: { id: req.params.id } }).then(function(dbProduct) {
+      res.render("product", {
+        product: dbProduct
+
+
+      });
+    });
   });
 
   // testing page
@@ -73,4 +85,5 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
-};
+
+}
