@@ -1,11 +1,55 @@
+.jumbotron {
+  z-index: 0;
+}
+
+body {
+  background-color: #aaaaaa;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#uc {
+  text-align: center;
+  font-weight: 900;
+}
+
+
 .list-group-item {
   line-height: 2.5;
 }
 
-#cardTitle {
+                        /* ============= x ================ */
+.x {
+  cursor: pointer;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  font-weight: 700;
+  color: white;
+  background-color: #a72828;
+  border-radius: 6px;
   text-align: center;
+  line-height: 20px;
 }
 
+#xNR1 {
+  top: 6px;
+  right: 6px;
+} 
+#xNR2 {
+  top: 6px;
+  right: 6px;
+} 
+#xPC1 {
+  top: 6px;
+  right: 6px;
+} 
+#xPC2 {
+  top: 6px;
+  right: 6px;
+}
+                        /* ============= x ================ */
+
+                        /* ============= card ================ */
 .card-body {
   border-style: solid;
   border-radius: 10px;
@@ -14,26 +58,43 @@
   background-color: lightgray;
 }
 
-#paymentBackground {
-  position: fixed;
-  z-index: 2;
-  background-color: rgba(255, 255, 255, 0.5);
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
+#cardTitle {
+  text-align: center;
 }
 
-#item_amount {
-  position: absolute;
-  bottom: -10px;
-  right: -15px;
-  font-size: 20px;
-  text-align: center;
-  /* height: 15px;
-  width: 15px; */
-  border-radius: 120px;
+#summaryCardNR1 {
+  z-index: 5;
+  position: fixed;
+  display: none;
+  top: 202px;
+  right: 25vw;
 }
+
+#summaryCardPC1 {
+  z-index: 5;
+  position: fixed;
+  display: none;
+  top: 202px;
+  right: 25vw;
+}
+
+#summaryCardNR2 {
+  z-index: 5;
+  position: fixed;
+  display: none;
+  top: 305px;
+  right: 25vw;
+}
+
+#summaryCardPC2 {
+  z-index: 5;
+  position: fixed;
+  display: none;
+  top: 305px;
+  right: 25vw;
+}
+
+
 
 #paymentCard {
   border: none;
@@ -53,9 +114,58 @@
   z-index: 5;
 }
 
+                        /* ============= card ================ */
 
 
-#checkoutBttn, #deleteBttn{
+
+                        /* ============= poster ================ */
+.posterDiv {
+  border-style: solid;
+  border-color: #343a40;
+  height: 70px;
+  width: 70px;
+}
+
+#poster {
+  height: 420px;
+  width: 280px;
+}
+                        /* ============= poster ================ */
+
+
+
+#paymentBackground {
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* #summaryBackground {
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+} */
+
+#item_amount {
+  position: absolute;
+  bottom: -10px;
+  right: -15px;
+  font-size: 20px;
+  text-align: center;
+  /* height: 15px;
+  width: 15px; */
+  border-radius: 120px;
+}
+
+#checkoutBttn, #deleteBttn, .summaryBttn{
   cursor: pointer;
   text-align: center;
   line-height: 50px;
@@ -74,7 +184,7 @@
   color: white;
   background-color: #28a745;
 }
-#checkoutBttn:active {
+#checkoutBttn:active, .summaryBttn:active{
   color: white;
   background-color: #1f8035;
 }
@@ -159,10 +269,6 @@
   background-size: 30px 30px;
 }
 
-body {
-  background-color: #aaaaaa;
-  font-family: 'Josefin Sans', sans-serif;
-}
 
 .container {
   background-color: lightgray;
@@ -184,10 +290,6 @@ h1, h2 {
   text-align: center;
 }
 
-#poster {
-  height: 420px;
-  width: 280px;
-}
 
 p {
   font-weight: 900;

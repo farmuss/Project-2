@@ -1,18 +1,66 @@
 $(document).ready(function() {
   $("#item_amount").text("5");
 
+  $("#deleteBttn").on("click", function() {
+    $("#deleteTest").css("display", "none");
+    $("#deleteHR").css("display", "none");
+  });
+
+ 
   $("#checkoutBttn").on("click", function() {
     $("#paymentCard").css("display", "block");
   });  
 
-  $("#deleteBttn").on("click", function() {
-    $("#deleteTest").css("display", "none");
-    $("#deleteTest2").css("display", "none");
-  });
-
   $("#closePayment").on("click", function() {
     $("#paymentCard").css("display", "none");
   });
+
+  //              new releases
+
+  // 1 display: NONE
+  $("#xNR1").on("click", function() {
+    $("#summaryCardNR1").css("display", "none");
+  });
+  // 1 display:  BLOCK
+  $("#summaryBttnNR1").on("click", function() {
+    $("#summaryCardNR1").css("display", "block");
+  });
+  
+
+
+  // 2 display: NONE
+  $("#xNR2").on("click", function() {
+    $("#summaryCardNR2").css("display", "none");
+  });
+  // 2 display:  BLOCK
+  $("#summaryBttnNR2").on("click", function() {
+    $("#summaryCardNR2").css("display", "block");
+  });
+  //              new releases
+
+
+  //   //              PC Games
+
+  // // 1 display: NONE
+  // $("#xPC1").on("click", function() {
+  //   $("#summaryCardPC1").css("display", "none");
+  // });
+  // // 1 display: BLOCK
+  // $("#summaryBttnPC1").on("click", function() {
+  //   $("#summaryCardPC1").css("display", "block");
+  // });
+  
+
+
+  // // 2 display: NONE
+  // $("#xPC2").on("click", function() {
+  //   $("#summaryCardPC2").css("display", "none");
+  // });
+  // // 2 display:  BLOCK
+  // $("#summaryBttnPC1").on("click", function() {
+  //   $("#summaryCardPC2").css("display", "block");
+  // });
+  // //              PC Games
 
 
 // // stripe ===============================================
