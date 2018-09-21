@@ -43,7 +43,10 @@ module.exports = function (app) {
   app.post("/api/games", function (req, res) {
     client.games({
       fields: '*', // Return all fields
-      limit: 50, // Limit to 5 results
+      limit: 31, // Limit to 50 results
+      // filters: { 
+      //   "release_dates.date-gt": "2015-12-31",
+      // }
 
       // offset: 15 // Index offset for results
     }).then(response => {
@@ -51,7 +54,7 @@ module.exports = function (app) {
       if(response.body[i].cover != null) {
         console.log(response.body[i].cover.url);
          db.Product.create({
-               name: response.body[i].name,
+                name: response.body[i].name,
                 summary: response.body[i].summary,
                 category: response.body[i].category,
                 image: (response.body[i].cover.url)
